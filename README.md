@@ -146,9 +146,10 @@ Fonte: [CBIC — Guia Orientativo das Normas de Conservação de Água](https://
 
 E-mail: [gabrielymoreira.tech@gmail.com](mailto:gabrielymoreira.tech@gmail.com)
 
-## Repositório
-
+## Link do Repositório
 **[Cultiva](https://github.com/Inova-Tech-FIAP/cultiva/)**
+* **URL do Repositório:**  `https://github.com/Inova-Tech-FIAP/cultiva/`
+
 
 ## Declaração de uso de IA
 
