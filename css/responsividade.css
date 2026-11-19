@@ -1,0 +1,63 @@
+/* 
+RM575069 - Gabriely Santos Moreira - 1TDSPA
+RM575043 - Larissa Avelina Cerqueira - 1TDSPA 
+RM575985 - Isabelly Viana Chavier Bustamante Sa - 1TDSPA
+RM576189 - Stéfany Maria Santana Freitas - 1TDSPA
+RM576071 - Renan Hesz Filho - 1TDSPA 
+*/
+/* Cultiva | Global Solution Citizen Tech */
+/* Ajustes para tablets e telas intermediárias: menu, grades e colunas. */
+@media(max-width:900px) {
+    .site-header {
+        height: 72px;
+        padding: 0 22px
+    }
+
+    .brand img {
+        width: 125px
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 71px;
+        left: 0;
+        right: 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--blue);
+        padding: 18px 24px 24px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0
+    }
+
+    .main-nav.open {
+        display: flex
+    }
+
+    .nav-link {
+        padding: 9px 0;
+        border-bottom: 1px solid #333
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .agromap-layout {
+        grid-template-columns: 1fr
+    }
+
+    .brazil-map {
+        min-height: 300px
+    }
+
+    .members-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
