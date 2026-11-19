@@ -1,1 +1,81 @@
+<!--
+RM575069 - Gabriely Santos Moreira - 1TDSPA
+RM575043 - Larissa Avelina Cerqueira - 1TDSPA 
+RM575985 - Isabelly Viana Chavier Bustamante Sa - 1TDSPA
+RM576189 - Stéfany Maria Santana Freitas - 1TDSPA
+RM576071 - Renan Hesz Filho - 1TDSPA 
 
+Cultiva | Global Solution Citizen Tech
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!-- Metadados, título, fontes e folhas de estilo desta página. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Cultiva — tecnologia para apoiar o pequeno produtor rural no uso eficiente da água.">
+    <title>Contato | Cultiva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Harmattan:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsividade.css">
+</head>
+
+<body>
+    <!-- Cabeçalho compartilhado: marca, botão mobile e navegação principal. -->
+    <header class="site-header"><a class="brand" href="index.html" aria-label="Cultiva, página inicial"><img
+                src="assets/img/cultiva-logo.png" alt="Cultiva"></a><button class="menu-toggle" aria-label="Abrir menu"
+            aria-expanded="false"><span class="material-symbols-rounded">menu</span></button>
+        <nav class="main-nav" aria-label="Navegação principal"><a href="calculadora.html"
+                class="nav-link ">Calculadora</a><a href="agromapa.html" class="nav-link ">AgroMapa</a><a
+                href="sobre.html" class="nav-link ">Sobre</a><a href="integrantes.html"
+                class="nav-link ">Integrantes</a><a href="faq.html" class="nav-link ">FAQ</a><a href="contato.html"
+                class="nav-link active" aria-current="page">Contato</a></nav>
+    </header>
+    <!-- Conteúdo principal e específico desta página. -->
+    <main>
+        <section class="page-intro">
+            <p class="eyebrow">FALE COM A EQUIPE</p>
+            <h1>Contato</h1>
+            <p>Em caso de dúvidas, entre em contato.</p><a class="contact-email"
+                href="mailto:gabrielymoreira.tech@gmail.com"><span class="material-symbols-rounded">mail</span>
+                gabrielymoreira.tech@gmail.com</a>
+        </section>
+        <section class="contact-wrap">
+            <!-- Formulário demonstrativo; a validação é feita pelo arquivo contato.js. -->
+        <form id="contact-form" novalidate>
+                <h2>Mensagem</h2><label for="contact-name">Nome</label><input id="contact-name" name="nome" type="text"
+                    placeholder="Digite seu nome" required><small class="field-error"></small><label
+                    for="contact-email">E-mail</label><input id="contact-email" name="email" type="email"
+                    placeholder="Digite seu e-mail" required><small class="field-error"></small><label
+                    for="contact-subject">Assunto</label><input id="contact-subject" name="assunto" type="text"
+                    placeholder="Assunto da mensagem" required><small class="field-error"></small><label
+                    for="contact-message">Mensagem</label><textarea id="contact-message" name="mensagem" rows="5"
+                    placeholder="Digite a mensagem" required></textarea><small class="field-error"></small><button
+                    class="button button-primary" type="submit">Enviar</button>
+                <p id="contact-feedback" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+    <!-- Rodapé compartilhado com informações e atalhos do projeto. -->
+    <footer class="site-footer">
+        <div class="footer-top"><a class="footer-brand" href="index.html"><img src="assets/img/cultiva-logo.png"
+                    alt="Cultiva"></a>
+            <p>Tecnologia e informação para apoiar decisões mais conscientes no campo.</p>
+        </div>
+        <div class="footer-bottom"><span>© 2026 Cultiva · Global Solution FIAP</span>
+            <div class="footer-links"><a href="sobre.html">Sobre o projeto</a><a href="contato.html">Contato</a><a
+                    href="https://github.com/orgs/Inova-Tech-FIAP/people" target="_blank" rel="noopener">GitHub da equipe</a></div>
+        </div>
+    </footer>
+    <!-- JavaScript externo responsável pelos comportamentos interativos desta página. -->
+    <script src="js/main.js" defer></script>
+    <script src="js/contato.js" defer></script>
+</body>
+
+</html>
