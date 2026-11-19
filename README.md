@@ -33,12 +33,19 @@ Pequenos produtores precisam decidir como manejar a água e controlar custos de 
 
 ## Como executar
 
+Você pode visualizar o projeto diretamente pelo **GitHub Pages**, sem precisar instalar ou configurar nada:
+
+- **Acesse o projeto online:** [https://inova-tech-fiap.github.io/](https://inova-tech-fiap.github.io/)
+
+Se preferir executar localmente:
+
 1. Extraia a pasta do projeto.
 2. Abra a pasta `Cultiva` no Visual Studio Code.
-3. Inicie um servidor local, por exemplo com a extensão **Live Server**.
-4. Abra `index.html` pelo endereço local disponibilizado pelo servidor.
+3. Inicie um servidor local, por exemplo, utilizando a extensão **Live Server**.
+4. Acesse o `index.html` pelo endereço local disponibilizado pelo servidor.
 
-> O Agromapa carrega o SVG com `fetch`; por isso, não abra as páginas diretamente por `file://`. Use um servidor local.
+> **Importante:** O Agromapa carrega o SVG utilizando `fetch`. Por isso, ao executar localmente, utilize um servidor como o Live Server e não abra as páginas diretamente pelo `file://`.
+
 
 ## Estrutura
 
