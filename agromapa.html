@@ -1,0 +1,111 @@
+<!--
+RM575069 - Gabriely Santos Moreira - 1TDSPA
+RM575043 - Larissa Avelina Cerqueira - 1TDSPA 
+RM575985 - Isabelly Viana Chavier Bustamante Sa - 1TDSPA
+RM576189 - Stéfany Maria Santana Freitas - 1TDSPA
+RM576071 - Renan Hesz Filho - 1TDSPA 
+
+Cultiva | Global Solution Citizen Tech
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!-- Metadados, título, fontes e folhas de estilo desta página. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Cultiva — tecnologia para apoiar o pequeno produtor rural no uso eficiente da água.">
+    <title>AgroMapa | Cultiva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Harmattan:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsividade.css">
+</head>
+
+<body>
+    <!-- Cabeçalho compartilhado: marca, botão mobile e navegação principal. -->
+    <header class="site-header"><a class="brand" href="index.html" aria-label="Cultiva, página inicial"><img
+                src="assets/img/cultiva-logo.png" alt="Cultiva"></a><button class="menu-toggle" aria-label="Abrir menu"
+            aria-expanded="false"><span class="material-symbols-rounded">menu</span></button>
+        <nav class="main-nav" aria-label="Navegação principal"><a href="calculadora.html"
+                class="nav-link ">Calculadora</a><a href="agromapa.html" class="nav-link active"
+                aria-current="page">AgroMapa</a><a href="sobre.html" class="nav-link ">Sobre</a><a
+                href="integrantes.html" class="nav-link ">Integrantes</a><a href="faq.html" class="nav-link ">FAQ</a><a
+                href="contato.html" class="nav-link ">Contato</a></nav>
+    </header>
+    <!-- Conteúdo principal e específico desta página. -->
+    <main>
+        <section class="page-intro">
+            <p class="eyebrow">INFORMAÇÃO REGIONAL</p>
+            <h1>AgroMapa</h1>
+            <p>Explore características agrícolas e ambientais das cinco Grandes Regiões brasileiras.</p>
+        </section>
+        <!-- Área interativa do mapa e painel de informações por região. -->
+        <section class="agromap-layout">
+            <div class="map-panel">
+                <div class="map-panel-head">
+                    <h2>Explore o Brasil</h2>
+                    <p>Selecione uma região no mapa ou nos botões abaixo.</p>
+                </div>
+                <div id="brazil-map" class="brazil-map" role="group" aria-label="Mapa interativo das regiões do Brasil">
+                    <p class="map-loading">Carregando mapa...</p>
+                </div>
+                <div class="region-buttons"><button data-region="Norte">Norte</button><button
+                        data-region="Nordeste">Nordeste</button><button
+                        data-region="Centro-Oeste">Centro-Oeste</button><button
+                        data-region="Sudeste">Sudeste</button><button data-region="Sul">Sul</button></div>
+                <p class="map-asset-note">O SVG recebido contém identificadores de 24 estados; PR, SC e RS não estão
+                    presentes no arquivo original. A seleção da Região Sul também pode ser feita pelo botão.</p>
+            </div>
+            <div class="region-content">
+                <p class="eyebrow">REGIÃO SELECIONADA</p>
+                <h2 id="selected-region">Selecione uma região</h2>
+                <p id="region-intro">As informações aparecerão aqui após a seleção.</p>
+                <div class="category-tabs" role="tablist" aria-label="Categorias do AgroMapa"><button role="tab"
+                        aria-selected="true" data-category="production">Produção</button><button role="tab"
+                        aria-selected="false" data-category="climate">Clima</button><button role="tab"
+                        aria-selected="false" data-category="calendar">Calendário</button><button role="tab"
+                        aria-selected="false" data-category="challenges">Desafios</button><button role="tab"
+                        aria-selected="false" data-category="guidance">Orientações</button></div>
+                <article id="region-detail" class="region-detail" aria-live="polite">
+                    <h3>Escolha uma região para começar</h3>
+                    <p>Selecione uma das cinco regiões no mapa.</p>
+                </article>
+                <div class="map-sources">
+                    <h3>Fontes e referências</h3>
+                    <ul>
+                        <li><a href="https://agenciadenoticias.ibge.gov.br/media/com_mediaibge/arquivos/86bd2f37f9fffb7f3941e1c74351f469.pdf"
+                                target="_blank" rel="noopener">IBGE — Produção Agrícola Municipal 2024</a></li>
+                        <li><a href="https://www.gov.br/agricultura/pt-br/assuntos/riscos-seguro/risco-agropecuario/zoneamento-agricola"
+                                target="_blank" rel="noopener">MAPA — Zoneamento Agrícola de Risco Climático (ZARC)</a>
+                        </li>
+                        <li><a href="https://www.embrapa.br/" target="_blank" rel="noopener">Embrapa — publicações e
+                                recomendações técnicas</a></li>
+                    </ul><small>Calendários e recomendações precisam ser consultados por cultura, município, estado e
+                        safra; não representam uma prescrição uniforme para toda a região.</small>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Rodapé compartilhado com informações e atalhos do projeto. -->
+    <footer class="site-footer">
+        <div class="footer-top"><a class="footer-brand" href="index.html"><img src="assets/img/cultiva-logo.png"
+                    alt="Cultiva"></a>
+            <p>Tecnologia e informação para apoiar decisões mais conscientes no campo.</p>
+        </div>
+        <div class="footer-bottom"><span>© 2026 Cultiva · Global Solution FIAP</span>
+            <div class="footer-links"><a href="sobre.html">Sobre o projeto</a><a href="contato.html">Contato</a><a
+                    href="https://github.com/orgs/Inova-Tech-FIAP/people" target="_blank" rel="noopener">GitHub da equipe</a></div>
+        </div>
+    </footer>
+    <!-- JavaScript externo responsável pelos comportamentos interativos desta página. -->
+    <script src="js/main.js" defer></script>
+    <script src="js/agromapa-dados.js" defer></script>
+    <script src="js/agromapa.js" defer></script>
+</body>
+
+</html>

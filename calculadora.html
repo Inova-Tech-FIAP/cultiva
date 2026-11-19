@@ -1,0 +1,229 @@
+<!--
+RM575069 - Gabriely Santos Moreira - 1TDSPA
+RM575043 - Larissa Avelina Cerqueira - 1TDSPA 
+RM575985 - Isabelly Viana Chavier Bustamante Sa - 1TDSPA
+RM576189 - Stéfany Maria Santana Freitas - 1TDSPA
+RM576071 - Renan Hesz Filho - 1TDSPA 
+
+Cultiva | Global Solution Citizen Tech
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!-- Metadados, título, fontes e folhas de estilo desta página. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Cultiva — tecnologia para apoiar o pequeno produtor rural no uso eficiente da água.">
+    <title>Calculadora | Cultiva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Harmattan:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsividade.css">
+</head>
+
+<body>
+    <!-- Cabeçalho compartilhado: marca, botão mobile e navegação principal. -->
+    <header class="site-header"><a class="brand" href="index.html" aria-label="Cultiva, página inicial"><img
+                src="assets/img/cultiva-logo.png" alt="Cultiva"></a><button class="menu-toggle" aria-label="Abrir menu"
+            aria-expanded="false"><span class="material-symbols-rounded">menu</span></button>
+        <nav class="main-nav" aria-label="Navegação principal"><a href="calculadora.html" class="nav-link active"
+                aria-current="page">Calculadora</a><a href="agromapa.html" class="nav-link ">AgroMapa</a><a
+                href="sobre.html" class="nav-link ">Sobre</a><a href="integrantes.html"
+                class="nav-link ">Integrantes</a><a href="faq.html" class="nav-link ">FAQ</a><a href="contato.html"
+                class="nav-link ">Contato</a></nav>
+    </header>
+    <!-- Conteúdo principal e específico desta página. -->
+    <main>
+        <section class="page-intro">
+            <p class="eyebrow">FERRAMENTA CULTIVA</p>
+            <h1>Calculadora de irrigação</h1>
+            <p>Estime o consumo de água e os custos mensais da sua plantação.</p>
+        </section>
+        <section class="calculator-shell" id="calculator-shell">
+            <div class="step-indicator"><span class="step active" data-step-dot="1">1. Sua plantação</span><span
+                    class="step" data-step-dot="2">2. Água e custos</span><span class="step" data-step-dot="3">3. Água
+                    da chuva</span></div>
+            <!-- Formulário dividido em etapas para reunir os dados da simulação. -->
+        <form id="irrigation-form" novalidate>
+                <section class="calc-step active" data-step="1">
+                    <h2>Dados da plantação</h2>
+                    <p class="step-help">Informe as características da área que será irrigada.</p>
+                    <div class="form-grid">
+                        <div class="form-field"><label for="region">Região do Brasil</label><select id="region"
+                                required>
+                                <option value="">Selecione</option>
+                                <option>Norte</option>
+                                <option>Nordeste</option>
+                                <option>Centro-Oeste</option>
+                                <option>Sudeste</option>
+                                <option>Sul</option>
+                            </select></div>
+                        <div class="form-field"><label for="crop">Tipo de cultura</label><select id="crop" required>
+                                <option value="">Selecione</option>
+                                <option>Milho</option>
+                                <option>Alface</option>
+                                <option>Tomate</option>
+                                <option>Outra cultura</option>
+                            </select></div>
+                        <div class="form-field"><label for="area">Área plantada (m²)</label><input id="area"
+                                type="number" min="0.01" step="any" placeholder="Ex.: 100" required></div>
+                        <div class="form-field"><label for="method">Método de irrigação</label><select id="method"
+                                required>
+                                <option value="">Selecione</option>
+                                <option value="sulco">Sulcos</option>
+                                <option value="aspersao">Aspersão convencional</option>
+                                <option value="pivo">Pivô central</option>
+                                <option value="gotejamento">Gotejamento</option>
+                                <option value="micro">Microaspersão</option>
+                            </select></div>
+                        <div class="form-field"><label for="water-need">Necessidade hídrica (mm/dia)</label><input
+                                id="water-need" type="number" min="0.01" step="any"
+                                placeholder="Informe a ETc de referência" required><small>Varia com cultura, fase de
+                                desenvolvimento, clima e local. Informe um valor técnico para sua situação.</small>
+                        </div>
+                        <div class="form-field"><label for="irrigation-days">Dias de irrigação no mês</label><input
+                                id="irrigation-days" type="number" min="1" max="31" step="1" placeholder="Ex.: 20"
+                                required></div>
+                        <div class="form-field"><label for="efficiency">Eficiência da irrigação (%)</label><input
+                                id="efficiency" type="number" min="1" max="100" step="any"
+                                placeholder="Selecione o método" required><small id="efficiency-help">Escolha o método
+                                para carregar uma referência editável.</small></div>
+                    </div>
+                    <div class="step-actions"><span></span><button type="button" class="button button-primary"
+                            data-next="2">Próxima etapa</button></div>
+                </section>
+                <section class="calc-step" data-step="2">
+                    <h2>Água e custos</h2>
+                    <p class="step-help">Informe a fonte de água e os dados de funcionamento da bomba.</p>
+                    <div class="form-grid">
+                        <div class="form-field"><label for="source">Fonte de água</label><select id="source" required>
+                                <option value="">Selecione</option>
+                                <option value="rede">Rede pública</option>
+                                <option value="poco">Poço próprio</option>
+                                <option value="outra">Outra fonte</option>
+                            </select></div>
+                        <div class="form-field"><label for="water-tariff">Tarifa da água (R$/m³)</label><input
+                                id="water-tariff" type="number" min="0" step="any" value="0" required><small>Se não
+                                houver cobrança por volume, mantenha R$ 0,00.</small></div>
+                        <div class="form-field"><label for="pump-power">Potência da bomba (kW)</label><input
+                                id="pump-power" type="number" min="0" step="any" placeholder="Ex.: 1.5" required></div>
+                        <div class="form-field"><label for="pump-hours">Funcionamento da bomba (horas/dia)</label><input
+                                id="pump-hours" type="number" min="0" max="24" step="any" placeholder="Ex.: 3" required>
+                        </div>
+                        <div class="form-field"><label for="pump-days">Dias de funcionamento da bomba no
+                                mês</label><input id="pump-days" type="number" min="0" max="31" step="1"
+                                placeholder="Ex.: 20" required></div>
+                        <div class="form-field"><label for="energy-tariff">Tarifa de energia (R$/kWh)</label><input
+                                id="energy-tariff" type="number" min="0" step="any" value="0.90" required><small>R$
+                                0,90/kWh é uma referência editável do protótipo, não uma tarifa universal.</small></div>
+                    </div>
+                    <div class="step-actions"><button type="button" class="button button-secondary"
+                            data-prev="1">Voltar</button><button type="button" class="button button-primary"
+                            data-next="3">Próxima etapa</button></div>
+                </section>
+                <section class="calc-step" data-step="3">
+                    <h2>Aproveitamento da chuva</h2>
+                    <p class="step-help">A captação de água da chuva é opcional.</p>
+                    <fieldset class="rain-choice">
+                        <legend>Deseja utilizar água da chuva?</legend><label><input type="radio" name="rain"
+                                value="nao" checked> Não</label><label><input type="radio" name="rain" value="sim">
+                            Sim</label>
+                    </fieldset>
+                    <div id="rain-fields" class="form-grid is-disabled" aria-disabled="true">
+                        <div class="form-field"><label for="catchment-area">Área de captação (m²)</label><input
+                                id="catchment-area" type="number" min="0.01" step="any"
+                                placeholder="Área do telhado ou cobertura" disabled></div>
+                        <div class="form-field"><label for="rainfall">Chuva estimada no mês (mm)</label><input
+                                id="rainfall" type="number" min="0" step="any" placeholder="Ex.: 120" disabled></div>
+                        <div class="form-field"><label for="rain-coefficient">Coeficiente de
+                                aproveitamento</label><input id="rain-coefficient" type="number" min="0.01" max="1"
+                                step="any" value="0.85" disabled><small>Referência editável; varia conforme cobertura e
+                                perdas do sistema.</small></div>
+                        <div class="form-field"><label for="tank-capacity">Capacidade do reservatório (L)</label><input
+                                id="tank-capacity" type="number" min="0.01" step="any" placeholder="Ex.: 5000" disabled>
+                        </div>
+                    </div>
+                    <p class="form-note">A área de captação é a superfície que recebe a chuva, como um telhado. Ela não
+                        é necessariamente igual à área plantada.</p>
+                    <div class="step-actions"><button type="button" class="button button-secondary"
+                            data-prev="2">Voltar</button><button type="button" class="button button-primary"
+                            id="calculate-button">Calcular meus custos</button></div>
+                </section>
+                <p id="calc-error" class="form-feedback error" role="alert"></p>
+            </form>
+        </section>
+        <section id="report-section" class="report-section" hidden><a href="#" id="back-calculator"
+                class="back-link"><span class="material-symbols-rounded">arrow_back</span> Voltar para calculadora</a>
+            <div id="report-content" class="report-content">
+                <div class="report-heading">
+                    <p class="eyebrow">CULTIVA · SIMULAÇÃO</p>
+                    <h1>Relatório de Monitoramento Agrícola</h1>
+                    <p id="report-summary"></p>
+                </div>
+                <div class="report-group">
+                    <h2>Área</h2>
+                    <div class="report-grid">
+                        <article class="report-card"><small>Área plantada</small><strong id="r-area">—</strong>
+                        </article>
+                        <article class="report-card"><small>Área de captação</small><strong id="r-catchment">—</strong>
+                        </article>
+                    </div>
+                </div>
+                <div class="report-group">
+                    <h2>Hídrico</h2>
+                    <div class="report-grid">
+                        <article class="report-card blue"><small>Consumo diário estimado</small><strong
+                                id="r-daily">—</strong></article>
+                        <article class="report-card blue"><small>Consumo mensal estimado</small><strong
+                                id="r-monthly">—</strong></article>
+                        <article class="report-card blue"><small>Volume potencial de chuva</small><strong
+                                id="r-rain">—</strong></article>
+                        <article class="report-card blue"><small>Volume aproveitável no reservatório</small><strong
+                                id="r-stored">—</strong></article>
+                        <article class="report-card blue"><small>Água da chuva utilizada</small><strong
+                                id="r-used">—</strong></article>
+                    </div>
+                </div>
+                <div class="report-group">
+                    <h2>Financeiro</h2>
+                    <div class="report-grid">
+                        <article class="report-card green"><small>Custo mensal da água</small><strong
+                                id="r-water-cost">—</strong></article>
+                        <article class="report-card green"><small>Consumo de energia</small><strong
+                                id="r-energy">—</strong></article>
+                        <article class="report-card green"><small>Custo mensal de energia</small><strong
+                                id="r-energy-cost">—</strong></article>
+                        <article class="report-card green"><small>Economia potencial</small><strong
+                                id="r-saving">—</strong></article>
+                    </div>
+                </div>
+                <p id="rain-report-note" class="report-note"></p>
+                <p class="report-disclaimer">Os resultados são estimativas baseadas nos dados informados e em parâmetros
+                    de referência das culturas e dos métodos de irrigação. Não substituem uma avaliação técnica das
+                    necessidades reais da plantação.</p>
+            </div><button id="download-report" class="button button-primary" type="button"><span
+                    class="material-symbols-rounded">download</span> Exportar em PDF</button>
+        </section>
+    </main>
+    <!-- Rodapé compartilhado com informações e atalhos do projeto. -->
+    <footer class="site-footer">
+        <div class="footer-top"><a class="footer-brand" href="index.html"><img src="assets/img/cultiva-logo.png"
+                    alt="Cultiva"></a>
+            <p>Tecnologia e informação para apoiar decisões mais conscientes no campo.</p>
+        </div>
+        <div class="footer-bottom"><span>© 2026 Cultiva · Global Solution FIAP</span>
+            <div class="footer-links"><a href="sobre.html">Sobre o projeto</a><a href="contato.html">Contato</a><a
+                    href="https://github.com/orgs/Inova-Tech-FIAP/people" target="_blank" rel="noopener">GitHub da equipe</a></div>
+        </div>
+    </footer>
+    <!-- JavaScript externo responsável pelos comportamentos interativos desta página. -->
+    <script src="js/main.js" defer></script>
+    <script src="js/calculadora.js" defer></script>
+</body>
+
+</html>
