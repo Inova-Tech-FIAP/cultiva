@@ -10,7 +10,6 @@ Pequenos produtores precisam decidir como manejar a água e controlar custos de 
 
 [Global Solution 2026 — CitizenTech (FIAP)](https://experience.fiap.com.br/global-solution-citizen-tech#m-cenario)
 
-![Plantação utilizada na identidade visual do Cultiva](assets/img/img-04-index.png)
 
 ## Funcionalidades
 
