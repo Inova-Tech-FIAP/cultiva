@@ -35,7 +35,7 @@ Pequenos produtores precisam decidir como manejar a água e controlar custos de 
 
 Você pode visualizar o projeto diretamente pelo **GitHub Pages**, sem precisar instalar ou configurar nada:
 
-- **Acesse o projeto online:** [https://inova-tech-fiap.github.io/](https://inova-tech-fiap.github.io/cultiva/)
+- **Acesse o projeto online:** [https://inova-tech-fiap.github.io/cultiva/](https://inova-tech-fiap.github.io/cultiva/)
 
 Se preferir executar localmente:
 
