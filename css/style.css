@@ -1,0 +1,1105 @@
+/* 
+RM575069 - Gabriely Santos Moreira - 1TDSPA
+RM575043 - Larissa Avelina Cerqueira - 1TDSPA 
+RM575985 - Isabelly Viana Chavier Bustamante Sa - 1TDSPA
+RM576189 - Stéfany Maria Santana Freitas - 1TDSPA
+RM576071 - Renan Hesz Filho - 1TDSPA 
+*/
+/* Cultiva | Global Solution Citizen Tech */
+:root {
+    --bg: #1c1b1f;
+    --panel: #242329;
+    --panel2: #2b2931;
+    --blue: #4375e1;
+    --blue-light: #8db1ff;
+    --green: #009f6a;
+    --green-light: #00c382;
+    --yellow: #dac871;
+    --yellow-dark: #bfad54;
+    --white: #d9d9d9;
+    --muted: #aaa8b0;
+    --border: #45424d;
+    --font: 'Harmattan', sans-serif;
+    --max: 1180px
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--white);
+    font-family: var(--font);
+    font-size: 20px;
+    line-height: 1.35
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit
+}
+
+button,
+a,
+input,
+select,
+textarea {
+    outline-offset: 3px
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--blue-light)
+}
+
+.site-header {
+    height: 82px;
+    border-bottom: 1px solid var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 max(28px, calc((100vw - var(--max))/2));
+    position: relative;
+    z-index: 20;
+    background: var(--bg)
+}
+
+.brand img {
+    display: block;
+    width: 138px;
+    height: auto
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px
+}
+
+.nav-link {
+    font-size: 19px;
+    color: var(--white);
+    transition: color .2s
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--blue)
+}
+
+.nav-link.active {
+    font-weight: 700
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    color: var(--blue);
+    font-size: 30px
+}
+
+.material-symbols-rounded {
+    font-family: 'Material Symbols Rounded';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.15em;
+    line-height: 1;
+    vertical-align: middle;
+    display: inline-block;
+    white-space: nowrap;
+    direction: ltr;
+    font-feature-settings: 'liga';
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased
+}
+
+/* Regras globais e estilos da apresentação inicial (hero). */
+main {
+    min-height: 60vh
+}
+
+.hero {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(110deg, rgba(15, 15, 18, .96), rgba(28, 27, 31, .62)), radial-gradient(ellipse at 80% 40%, #354052, #1c1b1f 70%);
+    border-bottom: 1px solid #333;
+    padding: 60px max(7vw, 24px)
+}
+
+.hero-overlay {
+    max-width: var(--max);
+    width: 100%;
+    margin: auto
+}
+
+.home-hero {
+    background-image: linear-gradient(110deg, rgba(15, 15, 18, .18), rgba(28, 27, 31, .08)), url("../assets/img/img-01-index.png");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.eyebrow {
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: var(--blue-light);
+    text-transform: uppercase;
+    margin: 0 0 8px
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: .94;
+    margin: 0 0 24px;
+    font-weight: 600;
+    max-width: 700px
+}
+
+.hero-tagline {
+    font-size: 34px;
+    margin: 0
+}
+
+.asset-pending {
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #c5c1b5;
+    border: 1px dashed #7c7455;
+    padding: 7px 12px;
+    border-radius: 6px
+}
+
+.intro-section {
+    padding: 76px 24px;
+    max-width: 1120px;
+    margin: auto
+}
+
+.section-copy {
+    font-size: 26px;
+    max-width: 1000px
+}
+
+.section-copy .lead {
+    font-size: 32px;
+    line-height: 1.25;
+    margin-top: 0
+}
+
+.section-copy p {
+    margin: 0 0 20px
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 9px 18px;
+    min-height: 44px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background .2s, border-color .2s
+}
+
+.button-primary {
+    background: var(--blue);
+    color: white
+}
+
+.button-primary:hover {
+    background: #315fc1
+}
+
+.button-secondary {
+    background: transparent;
+    border-color: var(--border);
+    color: var(--white)
+}
+
+.button-secondary:hover {
+    border-color: var(--blue-light)
+}
+
+.feature-section {
+    padding: 62px 24px 80px;
+    background: #201f24
+}
+
+.section-heading,
+.feature-grid {
+    max-width: var(--max);
+    margin: auto
+}
+
+.section-heading {
+    margin-bottom: 28px
+}
+
+.section-heading h2,
+.cta-band h2 {
+    font-size: 38px;
+    margin: 0
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px
+}
+
+.feature-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden
+}
+
+.feature-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block
+}
+
+.feature-card>div {
+    padding: 20px
+}
+
+.feature-card h3 {
+    font-size: 26px;
+    margin: 0 0 6px
+}
+
+.feature-card p {
+    color: #c1bec7;
+    margin: 0 0 18px
+}
+
+.text-link {
+    color: var(--blue-light);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px
+}
+
+.cta-band {
+    max-width: var(--max);
+    margin: 70px auto;
+    padding: 36px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: linear-gradient(110deg, #25242a, #1d1c21)
+}
+
+/* Cabeçalhos internos, textos institucionais e cartões de integrantes. */
+.page-intro {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 64px 24px 34px
+}
+
+.page-intro h1 {
+    font-size: 48px;
+    line-height: 1;
+    margin: 0 0 8px
+}
+
+.page-intro>p:not(.eyebrow) {
+    font-size: 22px;
+    color: var(--muted);
+    margin: 0
+}
+
+.content-narrow {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px 80px
+}
+
+.content-block {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border)
+}
+
+.content-block h2 {
+    font-size: 29px;
+    margin: 0 0 8px;
+    color: var(--blue-light)
+}
+
+.content-block p {
+    margin: 0;
+    font-size: 21px
+}
+
+.source-note,
+.form-note,
+.report-note {
+    color: var(--muted);
+    font-size: 17px
+}
+
+.members-grid {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 10px 24px 90px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px
+}
+
+.member-card {
+    border: 1px solid var(--border);
+    background: var(--panel);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px 18px
+}
+
+.member-photo {
+    width: min(100%, 220px);
+    aspect-ratio: 1 / 1;
+    height: auto;
+    margin: 0 auto;
+    background: #1d1c21;
+    border: 1px dashed #5a5662;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #77717f
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 7px
+}
+
+.member-card h2 {
+    font-size: 24px;
+    line-height: 1.1;
+    margin: 16px 0 4px
+}
+
+.member-card p {
+    margin: 0 0 12px;
+    color: var(--muted)
+}
+
+.member-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 12px
+}
+
+.member-links a {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 3px 12px;
+    color: var(--blue-light)
+}
+
+.member-card code {
+    font-size: 13px;
+    color: #888;
+    overflow-wrap: anywhere
+}
+
+.faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px 90px
+}
+
+.faq-item {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin: 0 0 12px;
+    background: var(--panel);
+    overflow: hidden
+}
+
+.faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none
+}
+
+.faq-item summary .material-symbols-rounded {
+    color: var(--blue)
+}
+
+.faq-item[open] summary {
+    color: var(--blue-light)
+}
+
+.faq-item p {
+    margin: 0;
+    padding: 0 18px 18px;
+    color: #c4c1c9;
+    overflow: hidden
+}
+
+.contact-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    color: var(--blue-light)
+}
+
+/* Formulário de contato e mensagens de validação. */
+.contact-wrap {
+    max-width: 760px;
+    margin: 0 auto 90px;
+    padding: 0 24px
+}
+
+.contact-wrap form {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px
+}
+
+.contact-wrap h2 {
+    font-size: 30px;
+    margin: 0 0 14px
+}
+
+.contact-wrap label,
+.form-field label {
+    display: block;
+    margin: 10px 0 4px
+}
+
+.contact-wrap input,
+.contact-wrap textarea,
+.form-field input,
+.form-field select {
+    width: 100%;
+    background: #1d1c21;
+    color: var(--white);
+    border: 1px solid #514d59;
+    border-radius: 7px;
+    padding: 9px 12px;
+    min-height: 44px
+}
+
+.contact-wrap textarea {
+    resize: vertical
+}
+
+.contact-wrap input::placeholder,
+.contact-wrap textarea::placeholder,
+.form-field input::placeholder {
+    color: #827f89
+}
+
+.field-error {
+    display: block;
+    color: #ff9a9a;
+    min-height: 16px;
+    font-size: 15px
+}
+
+.invalid {
+    border-color: #ff7777 !important
+}
+
+.form-feedback {
+    min-height: 22px
+}
+
+.form-feedback.success {
+    color: var(--green-light)
+}
+
+.form-feedback.error {
+    color: #ff9a9a
+}
+
+/* Etapas, campos e relatório da calculadora de irrigação. */
+.calculator-shell,
+.report-section {
+    max-width: 1020px;
+    margin: 0 auto 80px;
+    padding: 0 24px
+}
+
+.step-indicator {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 18px
+}
+
+.step {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--muted)
+}
+
+.step.active {
+    background: #202b43;
+    border-color: var(--blue);
+    color: var(--blue-light)
+}
+
+.calc-step {
+    display: none;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px
+}
+
+.calc-step.active {
+    display: block
+}
+
+.calc-step h2 {
+    font-size: 30px;
+    margin: 0
+}
+
+.step-help {
+    color: var(--muted);
+    margin: 0 0 18px
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 22px
+}
+
+.form-field small {
+    display: block;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.15;
+    margin-top: 3px
+}
+
+.step-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 26px
+}
+
+.rain-choice {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 16px 0;
+    display: flex;
+    gap: 26px
+}
+
+.rain-choice legend {
+    padding: 0 6px;
+    color: var(--blue-light)
+}
+
+.rain-choice label {
+    display: flex;
+    align-items: center;
+    gap: 7px
+}
+
+.is-disabled {
+    opacity: .42
+}
+
+.form-note {
+    margin: 18px 0 0
+}
+
+.report-section[hidden] {
+    display: none
+}
+
+.report-content {
+    background: var(--bg);
+    padding: 18px 0 22px;
+    box-sizing: border-box;
+    width: 100%
+}
+
+.report-group,
+.report-card {
+    break-inside: avoid;
+    page-break-inside: avoid
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--blue-light);
+    margin: 0 0 16px
+}
+
+.report-heading {
+    margin-bottom: 20px
+}
+
+.report-heading h1 {
+    font-size: 38px;
+    margin: 0
+}
+
+.report-group {
+    margin: 18px 0
+}
+
+.report-group h2 {
+    font-size: 25px;
+    margin: 0 0 8px
+}
+
+.report-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px
+}
+
+.report-card {
+    padding: 16px;
+    border: 1px solid var(--yellow-dark);
+    border-radius: 10px;
+    background: rgba(218, 200, 113, .08);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    min-height: 90px
+}
+
+.report-card.blue {
+    border-color: var(--blue);
+    background: rgba(67, 117, 225, .10)
+}
+
+.report-card.green {
+    border-color: var(--green);
+    background: rgba(0, 159, 106, .10)
+}
+
+.report-card small {
+    display: block;
+    color: #c3c0c9
+}
+
+.report-card strong {
+    font-size: 26px;
+    color: var(--yellow);
+    font-weight: 600
+}
+
+.report-card.blue strong {
+    color: var(--blue-light)
+}
+
+.report-card.green strong {
+    color: var(--green-light)
+}
+
+.report-disclaimer {
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+    color: var(--muted);
+    font-size: 16px
+}
+
+.report-note {
+    font-size: 16px
+}
+
+/* Layout do AgroMapa, mapa SVG, filtros e painel regional. */
+.agromap-layout {
+    max-width: var(--max);
+    margin: 0 auto 90px;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: minmax(300px, .9fr) minmax(0, 1.1fr);
+    gap: 32px
+}
+
+.map-panel,
+.region-content {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px
+}
+
+.map-panel-head h2,
+.region-content h2 {
+    font-size: 28px;
+    margin: 0
+}
+
+.map-panel-head p {
+    color: var(--muted);
+    margin: 0
+}
+
+.brazil-map {
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px
+}
+
+.brazil-map svg {
+    width: 100%;
+    height: auto;
+    max-height: 440px
+}
+
+.map-loading {
+    color: var(--muted)
+}
+
+.region-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px
+}
+
+.region-buttons button,
+.category-tabs button {
+    background: #1c1b1f;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    color: var(--white);
+    padding: 5px 13px;
+    cursor: pointer
+}
+
+.region-buttons button.active,
+.category-tabs button[aria-selected="true"] {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: white
+}
+
+.map-asset-note {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 14px 0 0
+}
+
+.region-content>.eyebrow {
+    margin: 0
+}
+
+.region-content>p:not(.eyebrow) {
+    color: var(--muted)
+}
+
+.category-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 18px 0
+}
+
+.category-tabs button {
+    font-size: 16px
+}
+
+.region-detail {
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    min-height: 170px
+}
+
+.region-detail h3 {
+    font-size: 24px;
+    margin: 0 0 8px
+}
+
+.region-detail p {
+    margin: 0
+}
+
+.map-sources {
+    margin-top: 20px;
+    border-top: 1px solid var(--border);
+    padding-top: 12px
+}
+
+.map-sources h3 {
+    font-size: 20px;
+    margin: 0
+}
+
+.map-sources ul {
+    padding-left: 20px;
+    margin: 6px 0
+}
+
+.map-sources a {
+    color: var(--blue-light);
+    text-decoration: underline
+}
+
+.map-sources small {
+    color: var(--muted);
+    font-size: 15px
+}
+
+/* Rodapé compartilhado entre as páginas. */
+.site-footer {
+    border-top: 1px solid var(--blue);
+    padding: 34px max(28px, calc((100vw - var(--max))/2)) 20px;
+    background: #19181c
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding-bottom: 26px
+}
+
+.footer-brand img {
+    width: 130px
+}
+
+.footer-top p {
+    color: var(--muted);
+    margin: 0
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: #898690;
+    font-size: 16px
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px
+}
+
+.footer-links a:hover {
+    color: var(--blue-light)
+}
+
+/* Componentes visuais complementares e chamadas de ação da Home. */
+.steps-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: var(--max);
+    margin: 0 auto 70px;
+    gap: 0
+}
+
+.step-tile {
+    height: 330px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white
+}
+
+.step-tile:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 19, 23, .58)
+}
+
+.step-tile img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.step-number,
+.step-tile strong {
+    z-index: 1
+}
+
+.step-number {
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    font-size: 26px;
+    margin-bottom: 18px
+}
+
+.step-tile strong {
+    font-size: 25px;
+    line-height: 1.1
+}
+
+.home-cta {
+    max-width: var(--max);
+    margin: 0 auto 70px;
+    padding: 0 24px
+}
+
+.home-cta h2 {
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.12;
+    margin: 0 0 20px
+}
+
+.home-cta .button {
+    font-size: 22px
+}
+
+.closing-hero {
+    min-height: 410px;
+    position: relative;
+    overflow: hidden;
+    background: #26252a;
+    display: flex;
+    align-items: center;
+    padding: 50px max(7vw, 24px)
+}
+
+.closing-hero:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(20, 19, 23, .82), rgba(20, 19, 23, .38));
+    z-index: 1
+}
+
+.closing-hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 48%;
+    z-index: 0
+}
+
+.closing-hero>div {
+    position: relative;
+    z-index: 2;
+    max-width: var(--max);
+    width: 100%;
+    margin: auto
+}
+
+.closing-hero h2 {
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 1.1
+}
+
+.home-closing-hero h2 {
+    max-width: 720px;
+    color: #fff
+}
+
+/* Estados visuais, foco por teclado e seleção das regiões no mapa. */
+.brazil-map svg g.region-shape {
+    cursor: pointer;
+    outline: none !important;
+    transition: filter .2s
+}
+
+.brazil-map svg g.region-shape:focus {
+    outline: none !important
+}
+
+.brazil-map svg g.region-shape:focus-visible {
+    filter: drop-shadow(0 0 2px rgba(91, 145, 189, .9))
+}
+
+.brazil-map svg g.region-shape path,
+.brazil-map svg g.region-shape polygon,
+.brazil-map svg g.region-shape polyline {
+    fill: #a9d8ff !important;
+    stroke: none !important;
+    stroke-width: 0 !important;
+    vector-effect: non-scaling-stroke;
+    transition: fill .2s
+}
+
+.brazil-map svg g.region-shape:hover path,
+.brazil-map svg g.region-shape:hover polygon,
+.brazil-map svg g.region-shape:hover polyline {
+    fill: #8bc8ff !important
+}
+
+.brazil-map svg g.region-shape.region-active path,
+.brazil-map svg g.region-shape.region-active polygon,
+.brazil-map svg g.region-shape.region-active polyline {
+    fill: #5baeff !important
+}
+
+.brazil-map svg [data-region-outline="true"] {
+    fill: none !important;
+    stroke: #5b91bd !important;
+    stroke-width: 1.7 !important;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    pointer-events: none;
+    vector-effect: non-scaling-stroke
+}v
