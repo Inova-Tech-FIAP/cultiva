@@ -61,3 +61,265 @@ RM576071 - Renan Hesz Filho - 1TDSPA
         grid-template-columns: repeat(2, 1fr)
     }
 }
+
+/* Ajustes para celulares: tipografia, espaçamentos e componentes em coluna. */
+@media(max-width:600px) {
+    body {
+        font-size: 18px
+    }
+
+    .site-header {
+        height: 64px;
+        padding: 0 18px
+    }
+
+    .brand img {
+        width: 112px
+    }
+
+    .main-nav {
+        top: 63px
+    }
+
+    .hero {
+        min-height: 420px;
+        padding: 48px 22px
+    }
+
+    .hero h1 {
+        font-size: 48px
+    }
+
+    .hero-tagline {
+        font-size: 26px
+    }
+
+    .asset-pending {
+        font-size: 12px
+    }
+
+    .intro-section {
+        padding: 48px 22px
+    }
+
+    .section-copy {
+        font-size: 21px
+    }
+
+    .section-copy .lead {
+        font-size: 26px
+    }
+
+    .feature-section {
+        padding: 44px 18px
+    }
+
+    .section-heading h2,
+    .cta-band h2 {
+        font-size: 30px
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr
+    }
+
+    .feature-card img {
+        height: 220px
+    }
+
+    .cta-band {
+        margin: 36px 18px;
+        padding: 24px;
+        display: block
+    }
+
+    .cta-band .button {
+        margin-top: 18px
+    }
+
+    .page-intro {
+        padding: 44px 20px 26px
+    }
+
+    .page-intro h1 {
+        font-size: 40px
+    }
+
+    .page-intro>p:not(.eyebrow) {
+        font-size: 19px
+    }
+
+    .members-grid {
+        grid-template-columns: 1fr;
+        padding: 6px 20px 60px
+    }
+
+    .member-photo {
+        width: min(100%, 220px);
+        height: auto;
+        aspect-ratio: 1 / 1
+    }
+
+    .faq-list {
+        padding: 0 20px 60px
+    }
+
+    .faq-item summary {
+        font-size: 19px
+    }
+
+    .contact-wrap {
+        padding: 0 18px;
+        margin-bottom: 60px
+    }
+
+    .contact-wrap form {
+        padding: 20px
+    }
+
+    .content-narrow {
+        padding: 0 20px 60px
+    }
+
+    .content-block h2 {
+        font-size: 26px
+    }
+
+    .step-indicator {
+        gap: 5px
+    }
+
+    .step {
+        font-size: 15px;
+        padding: 8px 3px
+    }
+
+    .calculator-shell,
+    .report-section {
+        padding: 0 16px;
+        margin-bottom: 60px
+    }
+
+    .calc-step {
+        padding: 20px 16px
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 10px
+    }
+
+    .step-actions {
+        margin-top: 20px
+    }
+
+    .step-actions .button {
+        font-size: 16px;
+        padding: 7px 12px
+    }
+
+    .rain-choice {
+        gap: 16px
+    }
+
+    .report-grid {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .report-card {
+        padding: 12px;
+        min-height: 80px
+    }
+
+    .report-card strong {
+        font-size: 21px
+    }
+
+    .report-heading h1 {
+        font-size: 30px
+    }
+
+    .agromap-layout {
+        padding: 0 16px;
+        gap: 18px
+    }
+
+    .map-panel,
+    .region-content {
+        padding: 16px
+    }
+
+    .brazil-map {
+        min-height: 240px;
+        padding: 4px
+    }
+
+    .region-buttons {
+        gap: 6px
+    }
+
+    .region-buttons button,
+    .category-tabs button {
+        font-size: 15px;
+        padding: 4px 10px
+    }
+
+    .site-footer {
+        padding: 28px 20px 18px
+    }
+
+    .footer-top {
+        display: block
+    }
+
+    .footer-top p {
+        margin-top: 12px
+    }
+
+    .footer-bottom {
+        display: block
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 8px 16px;
+        margin-top: 12px
+    }
+}
+
+/* Refinos de formulários e relatórios em tablets. */
+@media(min-width:601px) and (max-width:900px) {
+    .form-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+
+    .report-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+/* Galeria e seção final da Home em telas pequenas. */
+@media(max-width:600px) {
+    .steps-gallery {
+        grid-template-columns: 1fr
+    }
+
+    .step-tile {
+        height: 250px
+    }
+
+    .home-cta {
+        margin: 0 auto 48px;
+        padding: 0 22px
+    }
+
+    .home-cta h2,
+    .closing-hero h2 {
+        font-size: 34px
+    }
+
+    .closing-hero {
+        min-height: 330px;
+        padding: 38px 22px
+    }
+}
