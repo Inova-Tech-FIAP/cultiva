@@ -150,9 +150,19 @@ E-mail: [gabrielymoreira.tech@gmail.com](mailto:gabrielymoreira.tech@gmail.com)
 
 **[Cultiva](https://github.com/Inova-Tech-FIAP/cultiva/)**
 
+
+## Vídeo Pitch
+
+Confira o vídeo de apresentação da solução CitizenTech, desenvolvido pela equipe Inova Tech:
+
+[▶ Assistir ao vídeo Pitch no YouTube](https://youtu.be/ewJK70V2LlM?si=xyR2UUU6QakJPIaB)
+
+
+
 ## Declaração de uso de IA
 
 Ferramenta de IA generativa utilizada como apoio ao desenvolvimento: organização inicial da estrutura, revisão de requisitos, auxílio na escrita de código, identificação de possíveis erros e elaboração de documentação. Todo o código e conteúdo devem ser revisados, testados e compreendidos pelos integrantes antes da entrega.
+
 
 
 ### Imagens da página inicial
